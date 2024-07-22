@@ -1,0 +1,139 @@
+package com.example.calculadora1
+
+import android.app.Activity
+import android.graphics.Color
+import android.os.Bundle
+import android.util.TypedValue
+import android.widget.Button
+import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.calculadora1.databinding.ActivityMainBinding
+import org.mariuszgromada.math.mxparser.Expression
+
+class MainActivity : AppCompatActivity() {
+
+private lateinit var binding: ActivityMainBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        enableEdgeToEdge()
+        binding= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+      var fontSizes= 70f
+      var warningSizes= 40f
+      val calculo= binding.tvinput
+
+      fun fontS(){
+        if (binding.tvinput.text.toString().length > 8
+          && binding.tvinput.text.toString().length < 11) {
+          fontSizes -=5f
+          binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizes)
+        }else{
+          if (binding.tvinput.text.toString().length >10){
+            fontSizes =45f
+            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizes)
+          }else{
+            fontSizes =60f
+            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizes)
+          }
+        }
+      }
+
+      binding.punt.setOnClickListener {
+
+          calculo.text = "${calculo.text}."
+      }
+      binding.cero.setOnClickListener {
+        calculo.text= "${calculo.text}0"
+        fontS()
+      }
+      binding.uno.setOnClickListener {
+            calculo.text= "${calculo.text}1"
+        fontS()
+        }
+      binding.dos.setOnClickListener {
+        calculo.text= "${calculo.text}2"
+        fontS()
+      }
+      binding.tres.setOnClickListener {
+        calculo.text= "${calculo.text}3"
+        fontS()
+      }
+      binding.cuat.setOnClickListener {
+        calculo.text= "${calculo.text}4"
+        fontS()
+      }
+      binding.cinc.setOnClickListener {
+        calculo.text= "${calculo.text}5"
+        fontS()
+      }
+      binding.seis.setOnClickListener {
+        calculo.text= "${calculo.text}6"
+        fontS()
+      }
+      binding.siet.setOnClickListener {
+        calculo.text= "${calculo.text}7"
+        fontS()
+      }
+      binding.ocho.setOnClickListener {
+        calculo.text= "${calculo.text}8"
+        fontS()
+      }
+      binding.nuev.setOnClickListener {
+        calculo.text= "${calculo.text}9"
+        fontS()
+      }
+
+      binding.perc.setOnClickListener {
+        calculo.text= "${calculo.text}%"
+      }
+      binding.raiz.setOnClickListener {
+        calculo.text= "${calculo.text}√"
+      }
+      binding.div.setOnClickListener {
+        calculo.text= "${calculo.text}/"
+      }
+      binding.mult.setOnClickListener {
+        calculo.text= "${calculo.text}*"
+      }
+      binding.rest.setOnClickListener {
+        calculo.text= "${calculo.text}-"
+      }
+      binding.suma.setOnClickListener {
+        calculo.text= "${calculo.text}+"
+      }
+
+
+      binding.borr.setOnClickListener {
+        calculo.text= calculo.text.dropLast(1)
+        binding.tvOutput.text= ""
+        fontS()
+      }
+      binding.ce.setOnClickListener {
+        calculo.text= ""
+        binding.tvOutput.text= ""
+            fontSizes =60f
+            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizes)
+      }
+
+      binding.igua.setOnClickListener {
+        val resultadoCalc= Expression(calculo.text.toString()).calculate()
+
+        if (resultadoCalc.isNaN()){
+          binding.tvOutput.text= "Ahora veo por que necesitas una calculadora!"
+          warningSizes =20f
+          binding.tvOutput.setTextSize(TypedValue.COMPLEX_UNIT_SP, warningSizes)
+          binding.tvOutput.setTextColor(Color.parseColor("#FF0000"))
+        }
+        else{
+          binding.tvinput.text= resultadoCalc.toString()
+          fontS()
+        }
+      }
+
+    }
+}
