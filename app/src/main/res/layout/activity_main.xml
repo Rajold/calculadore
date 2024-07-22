@@ -25,7 +25,7 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="12dp"
-            android:text="CASIO"
+            android:text="CESIO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
