@@ -77,7 +77,7 @@
             android:layout_marginEnd="4dp"
             android:fontFamily="@font/poxel"
             android:gravity="end"
-            android:text="MARIANOTI"
+            android:text="DEG MODE"
             android:textColor="@color/gray"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
