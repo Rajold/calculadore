@@ -123,7 +123,7 @@ private lateinit var binding: ActivityMainBinding
       binding.ce.setOnClickListener {
         calculo.text= ""
         binding.tvOutput.text= ""
-            fontSizes =60f
+            fontSizes =70f
             binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
       }
 
