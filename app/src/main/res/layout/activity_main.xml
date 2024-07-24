@@ -25,7 +25,7 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="1dp"
             android:layout_marginBottom="12dp"
-            android:text="CESIO"
+            android:text="CALSIO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -35,6 +35,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#191919"
@@ -42,7 +43,7 @@
             android:textColor="#ffffff"
             android:textSize="15sp"
             app:flow_horizontalBias="0.9"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvinput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.985"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,38 +55,37 @@
         <TextView
             android:id="@+id/tvinput"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginEnd="2dp"
-            android:fontFamily="@font/poxel"
+            android:layout_height="wrap_content"
+            android:maxHeight="135dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/fsex300"
             android:gravity="end"
             android:hint="0"
             android:textColor="@color/gray"
             android:textColorHint="@color/gray"
-            android:textSize="60sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="70dp"
+            app:layout_constraintBottom_toTopOf="@id/tvOutput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.502" />
 
         <TextView
             android:id="@+id/tvOutput"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="1dp"
-            android:layout_marginEnd="4dp"
-            android:fontFamily="@font/poxel"
+            android:fontFamily="@font/fsex300"
             android:gravity="end"
             android:text="DEG MODE"
             android:textColor="@color/gray"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.95" />
+            app:layout_constraintVertical_bias="0.87" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -137,9 +137,9 @@
                 android:text="√"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
-                app:cornerRadius="5dp"
+                app:cornerRadius="25dp"
                 app:strokeColor="#AC9595"
-                app:strokeWidth="1dp" />
+                app:strokeWidth="5dp" />
 
             <ImageButton
                 android:id="@+id/borr"

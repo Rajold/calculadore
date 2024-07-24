@@ -27,19 +27,26 @@ private lateinit var binding: ActivityMainBinding
       var warningSizes= 40f
       val calculo= binding.tvinput
 
-      fun fontS(){
-        if (binding.tvinput.text.toString().length > 8
-          && binding.tvinput.text.toString().length < 11) {
+      fun fontSizeDown(){
+        if (binding.tvinput.text.length > 8
+          && binding.tvinput.text.length < 11) {
           fontSizes -=5f
-          binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizes)
+          binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
         }else{
-          if (binding.tvinput.text.toString().length >10){
+          if (binding.tvinput.text.length >10){
             fontSizes =45f
-            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizes)
+            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
           }else{
-            fontSizes =60f
-            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizes)
+            fontSizes =70f
+            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
           }
+        }
+      }
+
+      fun fontSizeUp(){
+        if (binding.tvinput.text.length <13 && fontSizes <65){
+          fontSizes +=5f
+          binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
         }
       }
 
@@ -49,43 +56,43 @@ private lateinit var binding: ActivityMainBinding
       }
       binding.cero.setOnClickListener {
         calculo.text= "${calculo.text}0"
-        fontS()
+        fontSizeDown()
       }
       binding.uno.setOnClickListener {
             calculo.text= "${calculo.text}1"
-        fontS()
+        fontSizeDown()
         }
       binding.dos.setOnClickListener {
         calculo.text= "${calculo.text}2"
-        fontS()
+        fontSizeDown()
       }
       binding.tres.setOnClickListener {
         calculo.text= "${calculo.text}3"
-        fontS()
+        fontSizeDown()
       }
       binding.cuat.setOnClickListener {
         calculo.text= "${calculo.text}4"
-        fontS()
+        fontSizeDown()
       }
       binding.cinc.setOnClickListener {
         calculo.text= "${calculo.text}5"
-        fontS()
+        fontSizeDown()
       }
       binding.seis.setOnClickListener {
         calculo.text= "${calculo.text}6"
-        fontS()
+        fontSizeDown()
       }
       binding.siet.setOnClickListener {
         calculo.text= "${calculo.text}7"
-        fontS()
+        fontSizeDown()
       }
       binding.ocho.setOnClickListener {
         calculo.text= "${calculo.text}8"
-        fontS()
+        fontSizeDown()
       }
       binding.nuev.setOnClickListener {
         calculo.text= "${calculo.text}9"
-        fontS()
+        fontSizeDown()
       }
 
       binding.perc.setOnClickListener {
@@ -111,27 +118,27 @@ private lateinit var binding: ActivityMainBinding
       binding.borr.setOnClickListener {
         calculo.text= calculo.text.dropLast(1)
         binding.tvOutput.text= ""
-        fontS()
+        fontSizeUp()
       }
       binding.ce.setOnClickListener {
         calculo.text= ""
         binding.tvOutput.text= ""
             fontSizes =60f
-            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSizes)
+            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
       }
 
       binding.igua.setOnClickListener {
         val resultadoCalc= Expression(calculo.text.toString()).calculate()
 
         if (resultadoCalc.isNaN()){
-          binding.tvOutput.text= "Ahora veo por que necesitas una calculadora!"
+          binding.tvOutput.text= "AHORA VEO POR QUE NECESITAS UNA CALCULADORA!"
           warningSizes =20f
-          binding.tvOutput.setTextSize(TypedValue.COMPLEX_UNIT_SP, warningSizes)
+          binding.tvOutput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, warningSizes)
           binding.tvOutput.setTextColor(Color.parseColor("#FF0000"))
         }
         else{
           binding.tvinput.text= resultadoCalc.toString()
-          fontS()
+          fontSizeDown()
         }
       }
 
