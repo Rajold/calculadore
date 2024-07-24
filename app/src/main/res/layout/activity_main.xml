@@ -214,13 +214,13 @@
                 android:text="÷"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
-                app:cornerRadius="15dp"
+                app:cornerRadius="5dp"
                 app:strokeColor="#AC9595"
                 app:strokeWidth="1dp" />
         </TableRow>
 
         <TableRow
-            android:layout_weight="1"
+            android:layout_weight="1.7"
             >
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cuat"
@@ -269,7 +269,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/mult"
-                android:text="X"
+                android:text="x"
                 android:backgroundTint="#363636"
                 app:cornerRadius="5dp"
                 app:strokeColor="#AC9595"
