@@ -8,6 +8,8 @@
     
     <color name="gray">#484343</color>
 
+    <color name="lcdText">#543294</color>
+
     <color name="lcdshadow">#669a73</color>
 
 </resources>
