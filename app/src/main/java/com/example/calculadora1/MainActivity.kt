@@ -23,7 +23,7 @@ private lateinit var binding: ActivityMainBinding
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-      var fontSizes= 70f
+      var fontSizes= 60f
       var warningSizes= 40f
       val calculo= binding.tvinput
 
@@ -37,14 +37,14 @@ private lateinit var binding: ActivityMainBinding
             fontSizes =45f
             binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
           }else{
-            fontSizes =70f
+            fontSizes =60f
             binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
           }
         }
       }
 
       fun fontSizeUp(){
-        if (binding.tvinput.text.length <13 && fontSizes <65){
+        if (binding.tvinput.text.length <13 && fontSizes <60){
           fontSizes +=5f
           binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
         }
@@ -123,7 +123,7 @@ private lateinit var binding: ActivityMainBinding
       binding.ce.setOnClickListener {
         calculo.text= ""
         binding.tvOutput.text= ""
-            fontSizes =70f
+            fontSizes =60f
             binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
       }
 
@@ -131,10 +131,10 @@ private lateinit var binding: ActivityMainBinding
         val resultadoCalc= Expression(calculo.text.toString()).calculate()
 
         if (resultadoCalc.isNaN()){
-          binding.tvOutput.text= "AHORA VEO POR QUE NECESITAS UNA CALCULADORA!"
+          binding.tvOutput.text= "EN SERIO NECESITAS UNA CALCULADORA!"
           warningSizes =20f
           binding.tvOutput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, warningSizes)
-          binding.tvOutput.setTextColor(Color.parseColor("#FF0000"))
+          binding.tvOutput.setTextColor(Color.parseColor("#000000"))
         }
         else{
           binding.tvinput.text= resultadoCalc.toString()
