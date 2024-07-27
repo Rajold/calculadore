@@ -15,7 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/display"
+        android:background="@drawable/btnbg"
         >
 
         <TextView
@@ -69,6 +69,7 @@
             android:shadowDy="-5"
             android:shadowRadius="1"
             android:shadowColor="@color/lcdshadow"
+            android:textIsSelectable="true"
             app:layout_constraintBottom_toTopOf="@id/tvOutput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -78,24 +79,23 @@
         <TextView
             android:id="@+id/tvOutput"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_marginStart="3dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="1dp"
             android:fontFamily="@font/lcdrajold"
             android:gravity="end"
-            android:text="DEG MODE"
-            android:textColor="@color/lcdText"
-            android:textSize="40sp"
+            android:shadowColor="@color/lcdshadow"
             android:shadowDx="-5"
             android:shadowDy="-5"
             android:shadowRadius="1"
-            android:shadowColor="@color/lcdshadow"
+            android:text="DEG MODE"
+            android:textColor="@color/lcdText"
+            android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.87" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
