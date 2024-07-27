@@ -12,4 +12,6 @@
 
     <color name="lcdshadow">#669a73</color>
 
+    <color name="tvOutputBg">#a6af94</color>
+
 </resources>
