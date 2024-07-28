@@ -20,8 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="30dp"
             android:text="CALSIO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +33,9 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConv"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="240dp"
             android:backgroundTint="#191919"
             android:text="Conversor"
             android:textColor="#ffffff"
@@ -96,7 +97,7 @@
             android:shadowDx="-5"
             android:shadowDy="-5"
             android:shadowRadius="1"
-            android:text="DEG MODE"
+            android:text="Deg Mode"
             android:textColor="@color/lcdText"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -124,12 +125,11 @@
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:backgroundTint="#453734"
+                android:background="@drawable/redbtnbgeffect"
                 android:text="CE"
                 android:textColor="#bf726f"
                 android:textSize="30sp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp" />
+                 />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/perc"
@@ -137,13 +137,11 @@
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:backgroundTint="#363636"
+                android:background="@drawable/bkbtneffect"
                 android:text="%"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
-                app:cornerRadius="5sp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp" />
+               />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/raiz"
@@ -151,27 +149,23 @@
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:backgroundTint="#363636"
+                android:background="@drawable/bkbtneffect"
                 android:text="√"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
-                app:cornerRadius="25dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="5dp" />
+                />
 
-            <ImageButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/borr"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:backgroundTint="#363636"
-                android:src="@drawable/delete_24"
-                android:textColor="#F6A1AE"
-                android:textSize="40sp"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp" />
+                android:background="@drawable/redbtnbgeffect"
+                android:text="Del"
+                android:textColor="#bf726f"
+                android:textSize="30sp"
+                />
         </TableRow>
 
         <TableRow
@@ -180,10 +174,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/siet"
                 android:text="7"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -195,10 +186,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ocho"
                 android:text="8"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -210,10 +198,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nuev"
                 android:text="9"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
+
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -228,13 +214,11 @@
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:backgroundTint="#363636"
+                android:background="@drawable/bkbtneffect"
                 android:text="÷"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp" />
+                />
         </TableRow>
 
         <TableRow
@@ -243,10 +227,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cuat"
                 android:text="4"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -258,10 +239,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cinc"
                 android:text="5"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -273,10 +251,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/seis"
                 android:text="6"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -288,10 +263,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/mult"
                 android:text="x"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
+
                 android:textColor="#A1F6F3"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -307,10 +280,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/uno"
                 android:text="1"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -322,10 +292,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/dos"
                 android:text="2"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -337,10 +304,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/tres"
                 android:text="3"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -352,10 +316,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/rest"
                 android:text="-"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
                 android:layout_margin="2dp"
@@ -371,10 +332,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cero"
                 android:text="0"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -386,10 +344,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/punt"
                 android:text="."
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -401,7 +356,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/igua"
                 android:text="="
-                android:backgroundTint="#453734"
+                android:background="@drawable/redbtnbgeffect"
                 android:textColor="#bf726f"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -413,10 +368,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/suma"
                 android:text="+"
-                android:backgroundTint="#363636"
-                app:cornerRadius="5dp"
-                app:strokeColor="#AC9595"
-                app:strokeWidth="1dp"
+                android:background="@drawable/bkbtneffect"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
                 android:layout_margin="2dp"
@@ -431,7 +383,7 @@
             >
             <TextView
                 android:id="@+id/fin"
-                android:text="July 2004"
+                android:text="July 2024"
                 android:backgroundTint="#363636"
                 app:cornerRadius="5dp"
                 app:strokeColor="#AC9595"
