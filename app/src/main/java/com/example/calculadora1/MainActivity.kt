@@ -114,6 +114,22 @@ private lateinit var binding: ActivityMainBinding
         calculo.text= "${calculo.text}+"
       }
 
+      binding.pi.setOnClickListener {
+        calculo.text= "${calculo.text}π"
+      }
+
+      binding.para.setOnClickListener {
+        calculo.text= "${calculo.text}("
+      }
+
+      binding.parc.setOnClickListener {
+        calculo.text= "${calculo.text})"
+      }
+
+      binding.sign.setOnClickListener {
+        calculo.text= "${calculo.text}*-1"
+      }
+
 
       binding.borr.setOnClickListener {
         calculo.text= calculo.text.dropLast(1)

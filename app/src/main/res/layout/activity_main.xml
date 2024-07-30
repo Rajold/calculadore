@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="12dp"
-    android:background="@drawable/background"
+    android:background="@drawable/steel"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
@@ -21,7 +21,12 @@
             android:layout_height="30dp"
             android:layout_marginStart="28dp"
             android:layout_marginTop="30dp"
-            android:text="CALSIO"
+            android:text="FALSIO Stell edition"
+            android:textColor="@color/orange"
+            android:shadowColor="@color/black"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -36,9 +41,8 @@
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:layout_marginStart="240dp"
-            android:backgroundTint="#191919"
             android:text="Conversor"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="15sp"
             app:flow_horizontalBias="0.9"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -53,17 +57,18 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="8dp"
+
         >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="185dp"
+        android:background="@drawable/btnbg"
         >
 
         <TextView
             android:id="@+id/tvinput"
-            android:background="@drawable/btnbg"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:fontFamily="@font/lcdrajold"
@@ -90,7 +95,6 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginBottom="1dp"
-            android:background="@color/tvOutputBg"
             android:fontFamily="@font/lcdrajold"
             android:gravity="end"
             android:shadowColor="@color/lcdshadow"
@@ -116,7 +120,7 @@
         >
 
         <TableRow
-            android:layout_weight="1"
+            android:layout_weight="1.8"
             >
 
             <androidx.appcompat.widget.AppCompatButton
@@ -161,15 +165,16 @@
                 android:layout_height="match_parent"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:background="@drawable/redbtnbgeffect"
+                android:background="@drawable/bkbtneffect"
                 android:text="Del"
                 android:textColor="#bf726f"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 />
         </TableRow>
 
         <TableRow
-            android:layout_weight="1"
+            android:layout_weight="1.9"
+            android:layout_marginTop="15sp"
             >
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/siet"
@@ -207,22 +212,35 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 />
-
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/div"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_margin="2dp"
-                android:layout_weight="1"
+                android:id="@+id/para"
+                android:text="("
                 android:background="@drawable/bkbtneffect"
-                android:text="÷"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
                 />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/parc"
+                android:text=")"
+                android:background="@drawable/bkbtneffect"
+                android:textColor="#A1F6F3"
+                android:textSize="30sp"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                />
+
+
         </TableRow>
 
         <TableRow
             android:layout_weight="1.7"
+            android:layout_marginTop="15sp"
             >
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cuat"
@@ -272,10 +290,22 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/div"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bkbtneffect"
+                android:text="÷"
+                android:textColor="#A1F6F3"
+                android:textSize="30sp"
+                />
         </TableRow>
 
         <TableRow
-            android:layout_weight="1"
+            android:layout_weight="1.8"
+            android:layout_marginTop="15sp"
             >
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/uno"
@@ -312,6 +342,17 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/suma"
+                android:text="+"
+                android:background="@drawable/bkbtneffect"
+                android:textColor="#A1F6F3"
+                android:textSize="30sp"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/rest"
@@ -327,7 +368,8 @@
         </TableRow>
 
         <TableRow
-            android:layout_weight="1"
+            android:layout_weight="1.8"
+            android:layout_marginTop="15sp"
             >
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cero"
@@ -352,22 +394,9 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 />
-
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/igua"
-                android:text="="
-                android:background="@drawable/redbtnbgeffect"
-                android:textColor="#bf726f"
-                android:textSize="20sp"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/suma"
-                android:text="+"
+                android:id="@+id/sign"
+                android:text="+/-"
                 android:background="@drawable/bkbtneffect"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
@@ -376,14 +405,40 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pi"
+                android:text="π"
+                android:background="@drawable/bkbtneffect"
+                android:textColor="#A1F6F3"
+                android:textSize="30sp"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/igua"
+                android:text="="
+                android:background="@drawable/bkbtneffect"
+                android:textColor="#bf726f"
+                android:textSize="20sp"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                />
+
+
         </TableRow>
 
         <TableRow
             android:layout_weight="1"
+            android:layout_marginTop="15sp"
             >
             <TextView
                 android:id="@+id/fin"
-                android:text="July 2024"
+                android:text=""
                 android:backgroundTint="#363636"
                 app:cornerRadius="5dp"
                 app:strokeColor="#AC9595"
