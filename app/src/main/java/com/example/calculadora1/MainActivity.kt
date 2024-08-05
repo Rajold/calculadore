@@ -3,6 +3,7 @@ package com.example.calculadora1
 import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Vibrator
 import android.util.TypedValue
 import android.widget.Button
 import android.widget.TextView
@@ -16,13 +17,14 @@ import org.mariuszgromada.math.mxparser.Expression
 class MainActivity : AppCompatActivity() {
 
 private lateinit var binding: ActivityMainBinding
+private var vibrator: Vibrator?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+vibrator= getSystemService(VIBRATOR_SERVICE) as Vibrator?
       var fontSizes= 60f
       var warningSizes= 40f
       val calculo= binding.tvinput
