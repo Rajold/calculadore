@@ -133,9 +133,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/redbtnbgeffect"
                 android:text="CE"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:textColor="#bf726f"
-                android:textSize="30sp"
+                android:textSize="20sp"
                  />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -146,9 +146,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/bkbtneffect"
                 android:text="%"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:textColor="#A1F6F3"
-                android:textSize="30sp"
+                android:textSize="20sp"
                />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -159,9 +159,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/bkbtneffect"
                 android:text="√"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:textColor="#A1F6F3"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -172,7 +172,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bkbtneffect"
                 android:text="Del"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:textColor="#bf726f"
                 android:textSize="20sp"
                 />
@@ -224,10 +224,10 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/para"
                 android:text="("
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:background="@drawable/bkbtneffect"
                 android:textColor="#A1F6F3"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:layout_margin="2dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -236,10 +236,10 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/parc"
                 android:text=")"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:background="@drawable/bkbtneffect"
                 android:textColor="#A1F6F3"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:layout_margin="2dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -296,7 +296,7 @@
                 android:id="@+id/mult"
                 android:text="x"
                 android:background="@drawable/bkbtneffect"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:textColor="#A1F6F3"
                 android:textSize="20sp"
                 android:layout_margin="2dp"
@@ -312,7 +312,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bkbtneffect"
                 android:text="÷"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
                 />
@@ -363,7 +363,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/suma"
                 android:text="+"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:background="@drawable/bkbtneffect"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
@@ -376,7 +376,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/rest"
                 android:text="-"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:background="@drawable/bkbtneffect"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
@@ -419,7 +419,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/sign"
                 android:text="+-"
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:background="@drawable/bkbtneffect"
                 android:textColor="#A1F6F3"
                 android:textSize="30sp"
@@ -444,7 +444,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/igua"
                 android:text="="
-                android:fontFamily="@font/nunito_black"
+                android:fontFamily="@font/nunito_medium"
                 android:background="@drawable/bkbtneffect"
                 android:textColor="#bf726f"
                 android:textSize="20sp"
