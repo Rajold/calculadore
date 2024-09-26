@@ -1,19 +1,15 @@
 package com.example.calculadora1
 
-import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Vibrator
 import android.util.TypedValue
-import android.widget.Button
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.calculadora1.databinding.ActivityMainBinding
 import org.mariuszgromada.math.mxparser.Expression
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
 private lateinit var binding: ActivityMainBinding
@@ -26,33 +22,33 @@ private var vibrator: Vibrator?= null
         setContentView(binding.root)
 vibrator= getSystemService(VIBRATOR_SERVICE) as Vibrator?
       var fontSizes= 60f
-      var warningSizes= 40f
-      val calculo= binding.tvinput
-      val fNumber= 0
-      val sNumber= 0
+      var warningSizes: Float
+        val calculo= binding.tvInput
 
       fun fontSizeDown(){
-        if (binding.tvinput.text.length > 8
-          && binding.tvinput.text.length < 11) {
+        if (binding.tvInput.text.length > 8
+          && binding.tvInput.text.length < 11) {
           fontSizes -=5f
-          binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
+          binding.tvInput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
         }else{
-          if (binding.tvinput.text.length >10){
+          if (binding.tvInput.text.length >10){
             fontSizes =45f
-            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
+            binding.tvInput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
           }else{
             fontSizes =60f
-            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
+            binding.tvInput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
           }
         }
       }
 
       fun fontSizeUp(){
-        if (binding.tvinput.text.length <13 && fontSizes <60){
+        if (binding.tvInput.text.length <13 && fontSizes <60){
           fontSizes +=5f
-          binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
+          binding.tvInput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
         }
       }
+
+
 
       binding.punt.setOnClickListener {
           vibrator?.vibrate(30)
@@ -109,6 +105,11 @@ vibrator= getSystemService(VIBRATOR_SERVICE) as Vibrator?
           vibrator?.vibrate(30)
       }
 
+      binding.pi.setOnClickListener {
+        calculo.text= "${calculo.text}π"
+          vibrator?.vibrate(30)
+      }
+
       binding.perc.setOnClickListener {
         calculo.text= "${calculo.text}%"
           vibrator?.vibrate(30)
@@ -134,11 +135,6 @@ vibrator= getSystemService(VIBRATOR_SERVICE) as Vibrator?
           vibrator?.vibrate(30)
       }
 
-      binding.pi.setOnClickListener {
-        calculo.text= "${calculo.text}π"
-          vibrator?.vibrate(30)
-      }
-
       binding.para.setOnClickListener {
         calculo.text= "${calculo.text}("
           vibrator?.vibrate(30)
@@ -149,11 +145,15 @@ vibrator= getSystemService(VIBRATOR_SERVICE) as Vibrator?
           vibrator?.vibrate(30)
       }
 
-      binding.sign.setOnClickListener {
-        calculo.text= "${calculo.text}*-1"
-          vibrator?.vibrate(30)
-      }
+        binding.btnConv.setOnClickListener {
+            calculo.text= "${calculo.text}7.2330138512099"
+            vibrator?.vibrate(30)
+        }
 
+        binding.sign.setOnClickListener {
+            calculo.text= "${calculo.text}*-1"
+            vibrator?.vibrate(30)
+        }
 
       binding.borr.setOnClickListener {
         calculo.text= calculo.text.dropLast(1)
@@ -163,9 +163,10 @@ vibrator= getSystemService(VIBRATOR_SERVICE) as Vibrator?
       }
       binding.ce.setOnClickListener {
         calculo.text= ""
-        binding.tvOutput.text= ""
+        
+        binding.tvOutput.text=""
             fontSizes =60f
-            binding.tvinput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
+            binding.tvInput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, fontSizes)
           vibrator?.vibrate(30)
       }
 
@@ -173,14 +174,14 @@ vibrator= getSystemService(VIBRATOR_SERVICE) as Vibrator?
         val resultadoCalc= Expression(calculo.text.toString()).calculate()
 
         if (resultadoCalc.isNaN()){
-          binding.tvOutput.text= "EN SERIO NECESITAS UNA CALCULADORA!"
+          binding.tvOutput.text= "En serio?"
           warningSizes =20f
           binding.tvOutput.setTextSize(TypedValue.COMPLEX_UNIT_DIP, warningSizes)
           binding.tvOutput.setTextColor(Color.parseColor("#000000"))
             vibrator?.vibrate(30)
         }
         else{
-          binding.tvinput.text= resultadoCalc.toString()
+          binding.tvInput.text= resultadoCalc.toString()
           fontSizeDown()
             vibrator?.vibrate(30)
         }
